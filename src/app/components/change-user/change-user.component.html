@@ -1,0 +1,40 @@
+<h2>Редактировать пользователя</h2>
+
+<select (change)="onUserSelect($event)">
+  <option value="">Выберите пользователя</option>
+  <option *ngFor="let user of users" [value]="user.id">
+    {{ user.firstName }} {{ user.lastName }}
+  </option>
+</select>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" *ngIf="userForm">
+  <input type="hidden" formControlName="id">
+
+  <div>
+    <label>Имя:</label>
+    <input formControlName="firstName">
+  </div>
+
+  <div>
+    <label>Фамилия:</label>
+    <input formControlName="lastName">
+  </div>
+
+  <div>
+    <label>Возраст:</label>
+    <input type="number" formControlName="age">
+  </div>
+
+  <div>
+    <label>Телефон:</label>
+    <input formControlName="telephone">
+  </div>
+
+  <div>
+    <label>Колледж ID:</label>
+    <input type="number" formControlName="collegeID">
+  </div>
+
+  <button type="submit">Сохранить</button>
+</form>
+

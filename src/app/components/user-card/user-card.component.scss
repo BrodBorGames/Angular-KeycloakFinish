@@ -1,0 +1,26 @@
+
+.user-card{
+    padding: 10px 10px 10px 10px;
+    font-size: 15px;
+    width: 10rem;
+    background-color: #CCCCCC;
+    border-radius: 8px;
+}
+.name {
+    font-size: 20px;
+}
+.age {
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    background-color: black;
+    border-radius: 4px;
+    color: white;
+}
+.card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}

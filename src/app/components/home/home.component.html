@@ -1,0 +1,30 @@
+<div class="section">
+  <header>
+    <h1>Приветствую в Keycloak - Angular приложении!</h1>
+    <p class="description">Это публичная домашнаяяя страница</p>
+  </header>
+
+  <main>
+    <section>
+      <p class="description">Чтобы получить доступ воспользуйтесь следующими учётными данными</p>
+      <ul class="credentials">
+        <li>
+          <strong>User:</strong> <code>danil</code>
+          <button class="copy-btn" (click)="copyToClipboard('danil')" aria-label="Copy User">
+            <i class="copy-icon">📋</i>
+          </button>
+        </li>
+        <li>
+          <strong>Password:</strong> <code>password</code>
+          <button class="copy-btn" (click)="copyToClipboard('password')" aria-label="Copy Password">
+            <i class="copy-icon">📋</i>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <div *ngIf="copyMessage$ | async as copyMessage" class="message-box">
+      {{ copyMessage }}
+    </div>
+  </main>
+</div>

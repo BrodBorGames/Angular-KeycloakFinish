@@ -16,7 +16,7 @@ export class UsersComponent {
 
   ngOnInit() {
     // this.users = await this.usersService.listUser()
-    this.usersService.listUserHttp()
+    this.usersService.listUsersWithCollege()
     .subscribe((data) =>{
       console.log("Сработала функция")
       console.log(data);

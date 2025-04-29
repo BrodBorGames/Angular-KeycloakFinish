@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/user.model';
 import axios from 'axios';
@@ -26,6 +26,14 @@ export class UsersService {
 
   listUserHttp(): Observable<User[]> {
     return this.http.get<User[]>(`${this.apiUrl}`)
+  }
+  listUsersWithCollege(): Observable<User[]>{
+    return this.http.get<User[]>(`${this.apiUrl}/college`)
+  }
+  deleteUser(user: User){
+    return this.http.delete(`${this.apiUrl}`, {
+      params: new HttpParams().set(`id`, user.id)
+    })
   }
   createUser(user: User) {
     return this.http.post<User>(`${this.apiUrl}`, user)

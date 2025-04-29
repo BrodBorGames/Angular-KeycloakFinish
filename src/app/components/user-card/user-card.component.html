@@ -1,10 +1,21 @@
 <div class="user-card">
     <div class="card-header"> 
         <div class="name">{{user.firstName + " " +user.lastName}}</div>
+        <div class="telephone">{{user.telephone}}</div>
         <div class="age">{{user.age}}</div>
+        
     </div>
     
-    <div class="telephone">{{user.telephone}}</div>
-    <div class="college">{{user.collegeID}}</div>
+    
+    <div class="college">
+        <div class="college-name">
+            {{user.college.name}}
+        </div>
+        <div class="director">
+            {{user.college.director}}
+        </div>
+        
+        </div>
+
 
 </div>

@@ -8,7 +8,8 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-create-user',
   imports: [ReactiveFormsModule, CommonModule],
-  templateUrl: './create-user.component.html'
+  templateUrl: './create-user.component.html',
+  styleUrl: './create-user.component.scss'
 })
 export class CreateUserComponent implements OnInit {
   userForm!: FormGroup;

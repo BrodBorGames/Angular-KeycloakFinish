@@ -48,11 +48,20 @@ export class ChangeUserComponent implements OnInit{
     });
   }
 
-  onSubmit() {
+  updateUser() {
     if (this.userForm.valid) {
       this.userService.updateUser(this.userForm.value).subscribe(response => {
         console.log('User обновлен', response);
       });
+    }
+  }
+  deleteUser(){
+    console.log("Сработало удаление")
+    if(this.userForm.valid){
+      this.userService.deleteUser(this.userForm.value).subscribe(
+        respose =>
+          console.log('User удалён', respose)
+      )
     }
   }
 }

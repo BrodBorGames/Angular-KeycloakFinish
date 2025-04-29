@@ -1,3 +1,5 @@
+import { college } from "./college.model"
+
 export interface User {
     id: string,
     firstName: string,
@@ -5,4 +7,5 @@ export interface User {
     age: Number,
     telephone: string,
     collegeID: number
+    college: college
 }

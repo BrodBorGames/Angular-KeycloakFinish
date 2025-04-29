@@ -2,12 +2,19 @@
 .user-card{
     padding: 10px 10px 10px 10px;
     font-size: 15px;
-    width: 10rem;
+    width: 20rem;
     background-color: #CCCCCC;
     border-radius: 8px;
 }
 .name {
+    width: fit-content;
     font-size: 20px;
+    font-weight: 800;
+}
+.telephone {
+    font-family: Arial;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .age {
     text-align: center;
@@ -21,6 +28,22 @@
 .card-header {
     display: flex;
     flex-direction: row;
+    flex-shrink: 10;
     justify-content: space-between;
 
+}
+.college-name{
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: 800;
+}
+.director {
+    font-size: 18px;
+    font-family: sans-serif;
+
+}
+.college{
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, rgba(0, 0, 255, 0.137), pink);
 }

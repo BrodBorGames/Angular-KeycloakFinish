@@ -1,33 +1,38 @@
 <h2>Создание пользователя</h2>
 
 
-
-<form [formGroup]="userForm" (ngSubmit)="onSubmit()" *ngIf="userForm">
+<div class="form">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" *ngIf="userForm">
     
-  <div>
+ 
     <label>Имя:</label>
     <input formControlName="firstName">
-  </div>
 
-  <div>
+
+
     <label>Фамилия:</label>
     <input formControlName="lastName">
-  </div>
+ 
 
-  <div>
+
     <label>Возраст:</label>
     <input type="number" formControlName="age">
-  </div>
 
-  <div>
+
+
     <label>Телефон:</label>
     <input formControlName="telephone">
-  </div>
 
-  <div>
+
+
     <label>Колледж ID:</label>
     <input type="number" formControlName="collegeID">
-  </div>
+ 
+  <div class="buttons">
 
-  <button type="submit">Создать</button>
+    <button class ="btn" type="submit">Создать</button>
+  </div>
+  
 </form>
+</div>
+

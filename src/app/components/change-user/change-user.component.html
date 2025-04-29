@@ -1,40 +1,49 @@
 <h2>Редактировать пользователя</h2>
+<div class="form">
+  
+  
+  
+  <form [formGroup]="userForm"  *ngIf="userForm">
+    <div class="select">
+      <select (change)="onUserSelect($event)">
+        <option value="">Выберите пользователя</option>
+        <option *ngFor="let user of users" [value]="user.id">
+          {{ user.firstName }} {{ user.lastName }}
+        </option>
+      </select>
+    </div>
+    <input type="hidden" formControlName="id">
+  
+          <label>Имя:</label>
+      <input formControlName="firstName">
 
-<select (change)="onUserSelect($event)">
-  <option value="">Выберите пользователя</option>
-  <option *ngFor="let user of users" [value]="user.id">
-    {{ user.firstName }} {{ user.lastName }}
-  </option>
-</select>
+  
 
-<form [formGroup]="userForm" (ngSubmit)="onSubmit()" *ngIf="userForm">
-  <input type="hidden" formControlName="id">
+      <label>Фамилия:</label>
+      <input formControlName="lastName">
 
-  <div>
-    <label>Имя:</label>
-    <input formControlName="firstName">
-  </div>
+  
 
-  <div>
-    <label>Фамилия:</label>
-    <input formControlName="lastName">
-  </div>
+      <label>Возраст:</label>
+      <input type="number" formControlName="age">
 
-  <div>
-    <label>Возраст:</label>
-    <input type="number" formControlName="age">
-  </div>
+  
 
-  <div>
-    <label>Телефон:</label>
-    <input formControlName="telephone">
-  </div>
+      <label>Телефон:</label>
+      <input formControlName="telephone">
+ 
+  
 
-  <div>
-    <label>Колледж ID:</label>
-    <input type="number" formControlName="collegeID">
-  </div>
+      <label>Колледж ID:</label>
+      <input type="number" formControlName="collegeID">
 
-  <button type="submit">Сохранить</button>
-</form>
+    <div class="buttons">
+      <button class="btn" type="submit" (click)="deleteUser()">Удалить</button>
+      <button class="btn" (click)="updateUser()">Сохранить</button>
+    </div>
+    
+  </form>
+
+</div>
+
 
